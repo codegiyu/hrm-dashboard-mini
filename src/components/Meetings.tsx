@@ -110,7 +110,7 @@ export const Meetings = () => {
           <p className="text-lg text-[#8F8F8F]">Create New Meetings Here!</p>
         </div>
       ) : (
-        <div className="flex flex-col gap-5 border border-blue-400 h-full overflow-y-auto">
+        <div className="flex flex-col gap-5 h-full overflow-y-auto">
           {meetings.map((meeting) => {
             const meetingDate = new Date(meeting.date);
             const day = meetingDate.toString().slice(0, 3);
