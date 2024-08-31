@@ -6,6 +6,11 @@ export default {
       fontFamily: {
         kanit: ["'Kanit'", "sans-serif"],
       },
+      colors: {
+        blue: "#377DFF",
+        grey: "#C4C4C4",
+        primary: "#333333"
+      }
     },
   },
   plugins: [],
