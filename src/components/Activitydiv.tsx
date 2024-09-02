@@ -1,15 +1,6 @@
 import Message from "./Message";
 
-
-export default function Activitydiv({
-  name,
-  perfaction,
-  title,
-  time,
-  svgfile,
-  label,
-  color,
-}: {
+interface Activitydivinter {
   time: string;
   name: string;
   title: string;
@@ -17,28 +8,30 @@ export default function Activitydiv({
   svgfile: any;
   label: string;
   color: string;
-}) {
+}
+
+export default function Activitydiv(datas :Activitydivinter) {
   return (
     <div className="flex justify-between justify-self-start">
       <div className="flex gap-2.5">
-        <div><img src={svgfile} alt="" /></div>
+        <div><img src={datas.svgfile} alt="" /></div>
         <div>
           <Message
-            time={time}
-            name={name}
-            title={title}
-            perfaction={perfaction}
+            time={datas.time}
+            name={datas.name}
+            title={datas.title}
+            perfaction={datas.perfaction}
           />
         </div>
       </div>
       <div
         style={{
-          color: color,
-          backgroundColor: `${color}33`,
+          color: datas.color,
+          backgroundColor: `${datas.color}33`,
         }}
         className="rounded-md p-1.5 "
       >
-        {label}
+        {datas.label}
       </div>
     </div>
   );

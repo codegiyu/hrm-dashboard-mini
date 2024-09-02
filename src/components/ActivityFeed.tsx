@@ -3,8 +3,6 @@ import Activitydiv from "./Activitydiv";
 import { activityData } from "../constants/activitydata";
 
 
-
-
 export const ActivityFeed = () => {
   return (
     <section className="grid place-items-center h-[16rem] gap-2.5">
@@ -12,10 +10,35 @@ export const ActivityFeed = () => {
         <div className="font-semibold text-lg leading-[26.91px] text-[#333333]">
           Activity Feed
         </div>
-        <div className="border border-[#F0F0F0] rounded-[10px] flex items-center py-2 px-2.5 gap-1.5 ">
+       {/*select goes here */}
+      </div>
+      <div className="flex flex-col gap-5 w-full self-start ">
+        {activityData.map((d) => {
+          return (
+            <Activitydiv
+              time={d.time}
+              name={d.name}
+              title={d.title}
+              perfaction={d.perfaction}
+              svgfile={d.svgfile}
+              label={d.label}
+              color={d.color}
+            />
+          );
+        })}
+      </div>
+    </section>
+  );
+};
+
+
+{
+  /*<div className="border border-[#F0F0F0] rounded-[10px] flex items-center py-2 px-2.5 gap-1.5 ">
           <span className="text-[12px] leading-[14.52px] font-medium text-[#333333]">
             All Activity
           </span>
+
+          
           <span>
             <svg
               width="11"
@@ -30,23 +53,8 @@ export const ActivityFeed = () => {
               />
             </svg>
           </span>
-        </div>
-      </div>
-      <div className="flex flex-col gap-5 w-full self-start ">
-        {activityData.map((d) => {
-          return (
-            <Activitydiv time={d.time} name={d.name} title={d.title} perfaction={d.perfaction} svgfile={d.svgfile} label={d.label} color={d.color}  />)       
-        })}
-
-
-
-      </div>
-    </section>
-  );
-};
-
-
-
+        </div> */
+}
 
 
 
