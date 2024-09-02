@@ -2,6 +2,7 @@ import svgfile1 from "../assets/activitydeivimages/Group 23.png";
 import svgfile2 from "../assets/activitydeivimages/Group 24.png";
 import svgfile3 from "../assets/activitydeivimages/Frame 39.png";
 
+
 export const activityData = [
   {
     time: "10 mins",
@@ -10,6 +11,7 @@ export const activityData = [
     perfaction: "applied for the job",
     svgfile: svgfile1,
     label: "Applying",
+    status: "applying",
     color: "#377DFF",
   },
   {
@@ -19,6 +21,7 @@ export const activityData = [
     perfaction: "Created a new Account",
     svgfile: svgfile2,
     label: "Sign Up",
+    status: "signup",
     color: "#38CB89",
   },
   {
@@ -28,6 +31,7 @@ export const activityData = [
     perfaction: "applied for the job",
     svgfile: svgfile3,
     label: "Applying",
+    status: "applying",
     color: "#377DFF",
   },
 ];

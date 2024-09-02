@@ -1,21 +1,68 @@
 import Activitydiv from "./Activitydiv";
-
 import { activityData } from "../constants/activitydata";
+import { useState,useEffect } from "react";
+
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 
 
 export const ActivityFeed = () => {
+
+  const [selectedStatus, setSelectedStatus] = useState("");
+  const [filteredData, setFilteredData] = useState(activityData);
+   useEffect(() => {
+  if (selectedStatus === "" || selectedStatus === "all") {
+    // Show all items if no status is selected or 'all' is selected
+    setFilteredData(activityData);
+  } else {
+    // Filter items based on selected status
+    const filtered = activityData.filter(
+      (item) => item.status === selectedStatus
+    );
+    setFilteredData(filtered);
+  }
+}, [selectedStatus]);
+
+ const handleValueChange = (value:any) => {
+   setSelectedStatus(value);
+ };
+
   return (
     <section className="grid place-items-center h-[16rem] gap-2.5">
       <div className="flex justify-between self-start w-full">
         <div className="font-semibold text-lg leading-[26.91px] text-[#333333]">
           Activity Feed
         </div>
-       {/*select goes here */}
+        {/*select goes here */}
+        <Select onValueChange={handleValueChange}>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="All Activity" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup className="z-20">
+              <SelectLabel>
+                {" "}
+                <SelectItem value="all">All Activity</SelectItem>
+              </SelectLabel>
+              <SelectItem value="signup">Sign Up</SelectItem>
+              <SelectItem value="applying">Applying</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
       </div>
       <div className="flex flex-col gap-5 w-full self-start ">
-        {activityData.map((d) => {
+        {filteredData?.map((d, index) => {
           return (
             <Activitydiv
+              key={index}
               time={d.time}
               name={d.name}
               title={d.title}
