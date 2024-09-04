@@ -1,9 +1,5 @@
+import { list, CardDetails} from "./constant/CardInfo";
 
-interface CardDetails {
- title:string,
- value: number,
- bgColor: string
-}
 export const Card = ({title,value,bgColor}: CardDetails) => {
   return ( 
       <div className={`${bgColor === "cyan" ? "bg-[#29AB91]" :
@@ -19,32 +15,6 @@ export const Card = ({title,value,bgColor}: CardDetails) => {
   );
 };
 export const ColouredCards = () => {
-  const list = [
-    {
-      title: "Total Application",
-      value: 5672,
-      bgColor: "cyan"
-
-    },
-    {
-      title: "Shortlisted Candidated",
-      value: 234,
-      bgColor: "darkyellow"
-
-    },
-    {
-      title: "Rejected Candidated",
-      value: 3567,
-      bgColor: "orange"
-
-    },
-    {
-      title: "Candidated-in-Review",
-      value: 2145,
-      bgColor: "blue"
-
-    }
-  ]
   return (
     <section className="grid md:grid-cols-4 w-full gap-[20px]">
      {list.map((item, idx) =>{
