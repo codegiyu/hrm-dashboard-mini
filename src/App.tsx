@@ -4,7 +4,7 @@ import { ColouredCards } from './components/ColouredCards'
 import { DashboardBox } from './components/DashboardBox'
 import { Header } from './components/Header'
 import { Meetings } from './components/Meetings'
-import { RecentAddedJobs } from './components/RecentAddedJobs'
+import { RecentAddedJobs } from './components/jobs/RecentAddedJobs'
 import { DashboardLayout } from './layout/DashboardLayout'
 
 function App() {

@@ -30,7 +30,8 @@ export const Meetings = () => {
         time: time.value,
       };
 
-      setMeetings([...meetings, newMeeting]);
+      setMeetings((prev) => [...prev, newMeeting]);
+
 
       form.reset();
       setShowForm(false);
