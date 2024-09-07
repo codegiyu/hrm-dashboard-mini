@@ -16,7 +16,7 @@ function App() {
 
         <ColouredCards />
 
-        <section className="w-full grid grid-cols-[2fr_1fr] items-stretch gap-[1.875rem]">
+        <section className="w-full grid lg:grid-cols-[2fr_1fr] items-stretch gap-[1.875rem]">
           <DashboardBox>
             <Chart />
           </DashboardBox>
@@ -26,7 +26,7 @@ function App() {
           </DashboardBox>
         </section>
 
-        <section className="w-full grid grid-cols-2 items-stretch gap-[1.875rem]">
+        <section className="w-full grid lg:grid-cols-2 items-stretch gap-[1.875rem]">
           <DashboardBox>
             <ActivityFeed />
           </DashboardBox>

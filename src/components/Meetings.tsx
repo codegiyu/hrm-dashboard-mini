@@ -50,6 +50,7 @@ export const Meetings = () => {
   };
 
   const handleEdit = (id: number) => {
+    console.log({ id });
     // Handle the edit action still in progress...
     setShowDropdown(null); // Closes the dropdown for now
   };
