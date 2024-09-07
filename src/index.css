@@ -14,3 +14,7 @@ body {
 @layer utilities {
 
 }
+.overScrollbar::-webkit-scrollbar{
+ width: 0;
+
+}
