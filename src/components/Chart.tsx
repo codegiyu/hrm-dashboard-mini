@@ -23,9 +23,9 @@ const data = [
   const total = item.applications + item.shortlisted + item.rejected;
   return {
     ...item,
-    applications: (item.applications / 100) * 100,
-    shortlisted: (item.shortlisted / 100) * 100,
-    rejected: (item.rejected / 100) * 100,
+    // applications: (item.applications / 100) * 100,
+    // shortlisted: (item.shortlisted / 100) * 100,
+    // rejected: (item.rejected / 100) * 100,
     total
   };
 });
@@ -92,11 +92,11 @@ export const Chart = () => {
   return (
     <Card className="w-full h-[22rem] grid grid-rows-[auto_1fr] bg-white text-xs border-none shadow-none"> 
       <CardHeader className="flex flex-col p-0 m-0">
-        <div className="flex justify-between items-center">
+        <div className="grid md:flex gap-4 md:gap-0 justify-between items-center">
           <CardTitle className="text-sm font-semibold">
             Statistics of Active Applications
           </CardTitle>
-          <div className="flex items-center space-x-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
             <div className="flex items-center space-x-2">
               <Switch
                 id="applications"
