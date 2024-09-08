@@ -12,5 +12,19 @@ body {
 }
 
 @layer utilities {
+  /* .main-content > * {
+    grid-column: 2;
+  }
+
+  .main-content > * {
+    @apply mb-[1.875rem] md:mb-0;
+  }
+
+  .main-content > .full-bleed {
+    grid-column: 1 / 4;
+  } */
+}
+.overScrollbar::-webkit-scrollbar{
+ width: 0;
 
 }
