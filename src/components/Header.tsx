@@ -41,7 +41,7 @@ export const Header = () => {
           </SheetTrigger>
           <SheetContent side="left" className="p-0">
             <div className="w-full h-full bg-white">
-              <Sidebar />
+              <Sidebar desktop={true} />
             </div>
           </SheetContent>
         </Sheet>
