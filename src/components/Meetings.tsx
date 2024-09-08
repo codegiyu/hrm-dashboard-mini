@@ -48,7 +48,7 @@ export const Meetings = () => {
     setShowDropdown(null);
   };
 
-  const handleEdit = (id: number) => {
+  const handleEdit = () => {
     // Handle the edit action still in progress...
     setShowDropdown(null); // Closes the dropdown for now
   };
@@ -142,7 +142,7 @@ export const Meetings = () => {
                     <div className="absolute right-0 mt-2 w-28 bg-white shadow-md rounded-lg py-2 z-10">
                       <button
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        onClick={() => handleEdit(meeting.id)}
+                        onClick={() => handleEdit()}
                       >
                         Edit
                       </button>
