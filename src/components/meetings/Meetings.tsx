@@ -26,7 +26,7 @@ export const Meetings = () => {
   };
 
   return (
-    <section className="relative w-full h-64 flex flex-col gap-[30px] border border-red-500">
+    <section className="relative w-full h-64 flex flex-col gap-[30px]">
       <div className="flex justify-between items-center">
         <h3 className="font-kanit font-semibold text-lg text-black">
           Meetings
