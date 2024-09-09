@@ -26,7 +26,7 @@ export const Meetings = () => {
   };
 
   return (
-    <section className="relative w-full h-full flex flex-col gap-[30px]">
+    <section className="relative w-full h-64 flex flex-col gap-[30px] border border-red-500">
       <div className="flex justify-between items-center">
         <h3 className="font-kanit font-semibold text-lg text-black">
           Meetings
@@ -39,7 +39,7 @@ export const Meetings = () => {
           <p className="text-lg text-[#8F8F8F]">Create New Meetings Here!</p>
         </div>
       ) : (
-        <div className="flex flex-col gap-5 h-48 p-1 overflow-y-auto">
+        <div className="flex flex-col gap-5 h-full p-1 overflow-y-auto">
           {meetings.map((meeting) => (
             <MeetingItem
               key={meeting.id}
