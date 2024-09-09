@@ -20,7 +20,7 @@ export const Meetings = () => {
     setShowDropdown(null);
   };
 
-  const handleEdit = (id: number) => {
+  const handleEdit = () => {
     // Handle the edit action here
     setShowDropdown(null);
   };
